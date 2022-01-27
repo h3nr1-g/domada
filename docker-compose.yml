@@ -1,0 +1,9 @@
+version: "3"
+services:
+  controller:
+    build: ./
+    entrypoint: "/root/entrypoint.sh"
+    network_mode: host
+    volumes:
+      - ./mongodb_data:/data/db
+      - ./omada_data:/opt/tplink/EAPController/data/
